@@ -1,0 +1,7 @@
+<h1><%=@blogger.name %> Profile Page </h1>
+<% @blogger.posts.each do |post|%>
+<p>Post Title: <%= link_to post.title, post_path(post)%></p>
+<p>Amount of Likes: <%= post.likes%></p><br>
+<% end %>
+
+#post.likes.max_by(likes)
